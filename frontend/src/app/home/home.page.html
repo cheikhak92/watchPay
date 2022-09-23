@@ -1,0 +1,42 @@
+<ion-content *ngIf="show">
+
+  <form #form="ngForm">
+      <ion-grid>
+       <ion-row>
+         <ion-col>
+          <div class="ion-text-center">
+            <img  src="../../assets/icons/login2.png"/>
+            <h1 style= "color: rgb(16, 191, 239)" >
+              L'application qui vous paye vos frais
+            </h1>
+          </div>
+
+           <!-- <div style="width: 120px; height:auto;" class="ion-text-center">
+             <h3 style="color: rgb(129, 31, 31)">Connexion</h3>
+           </div> -->
+           <div class="ion-padding">
+             <ion-item style="color: rgb(18, 199, 239)">
+                 <ion-input name="username" [(ngModel)]="user.username" type="text" placeholder="Login"required >
+                  <ion-icon slot="start" color="white" name="person"></ion-icon>
+                 </ion-input>
+             </ion-item><br>
+             <ion-item style="color: rgb(18, 199, 239)">
+                  <ion-input name="password" [(ngModel)]="user.password" type="password" placeholder="Mot de passe"required >
+                     <ion-icon slot="start" color="white" name="lock"></ion-icon>
+                  </ion-input>
+             </ion-item>
+             <p [hidden] = "message.length==0" style="color: rgb(17, 223, 255);" class="ion-text-center">{{message}}</p>
+           </div>
+           <div class="ion-text-center">
+              <!-- <ion-button color="primary" (click)="login()" [disabled] = "form.invalid || !nogo"><ion-spinner name="crescent" [hidden] = "nogo"></ion-spinner>Go Jambars</ion-button> -->
+              <ion-button style="width: 200px;" color="primary" routerLink="/transaction">Connect</ion-button>
+            </div>
+            <div class="ion-text-center">
+              <!-- <ion-button color="primary" (click)="login()" [disabled] = "form.invalid || !nogo"><ion-spinner name="crescent" [hidden] = "nogo"></ion-spinner>Go Jambars</ion-button> -->
+              <ion-button style="width: 200px;" color="primary">S'inscrire</ion-button>
+            </div>
+         </ion-col>
+       </ion-row>
+      </ion-grid>
+  </form>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "watch-pay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

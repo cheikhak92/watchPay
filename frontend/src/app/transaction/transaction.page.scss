@@ -1,0 +1,49 @@
+table {
+    font-size: 0.75em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even){
+    background-color: #f2f2f3
+  }
+.col {
+    background-color: orangered;
+    color: white;
+}
+
+.ion-avatar {
+  border-radius: 4px;
+}
+
+.ion-margin-horizontal {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+
+
+.User_Label_Section {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.user_Name {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}

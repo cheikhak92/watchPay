@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>transaction-effectue</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form #form="ngForm">
+    <ion-grid>
+     <ion-row>
+       <ion-col>
+         <div class="ion-padding">
+           <ion-item style="color: rgb(18, 199, 239)">
+               <ion-input name="username" [(ngModel)]="newOperateur.nom" type="text" placeholder="Nom"required >
+                <ion-icon slot="start" color="white" name="person"></ion-icon>
+               </ion-input>
+           </ion-item><br>
+           <ion-item style="color: rgb(18, 199, 239)">
+                <ion-input name="password" [(ngModel)]="newOperateur.logo" type="password" placeholder="Logo"required >
+                   <ion-icon slot="start" color="white" name="lock"></ion-icon>
+                </ion-input>
+           </ion-item>
+         </div>
+       </ion-col>
+     </ion-row>
+    </ion-grid>
+  </form>
+
+
+</ion-content>

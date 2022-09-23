@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>List des operateur</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="operateur"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding" >
+
+   <!-- <h5>list des operateurs :</h5>
+   <ion-grid>
+      <ion-row>
+        <ion-col class="titre">Nom Operateur: <b>{{operateur.nom}}</b></ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col class="col">logo: <b>{{operateur.logo}}</b> </ion-col>
+      </ion-row>
+   </ion-grid> -->
+
+     <!-- <ion-searchbar
+         placeholder="Rechercher un nom de site"
+         [(ngModel)]="searchTerm"
+         showCancelButton="focus"
+         animated>
+
+     </ion-searchbar>
+
+     <div>
+
+      <table class="row header" >
+        <tr>
+          <th class="col">Nom</th>
+          <th class="col">Logo</th>
+        </tr>
+        <tr *ngFor="let op of operateur | filter:searchTerm ">
+          <td><b>{{op.nom}}</b></td>
+          <td>{{op.logo}}</td>
+        </tr>
+      </table>
+
+
+    </div> -->
+
+    <ion-list>
+      <ion-list-header>
+        <ion-label> CHOISIS TON OPERATEUR</ion-label>
+      </ion-list-header>
+      <ion-item lines="none" *ngFor="let op of operateur" routerLink="/transaction-effectue">
+        <ion-icon slot="start" name="cash" color="primary"></ion-icon>
+        <ion-label size="large" class="ion-text-wrap">
+          <b>{{op.logo}}</b>
+        </ion-label>
+        <ion-text slot="end" [color]="'warning'">{{op.nom}}</ion-text>
+      </ion-item>
+    </ion-list>
+
+   <!-- <ion-list>
+    <ion-list-header>
+      <ion-label>RECENT TRANSACTIONS</ion-label>
+    </ion-list-header>
+    <ion-item lines="none" *ngFor="let item of transactions">
+      <ion-icon slot="start" name="cash" color="primary"></ion-icon>
+      <ion-label size="large" class="ion-text-wrap">
+        <b>{{item.vendor}}</b>
+        <p>
+          {{item?.time}}
+        </p>
+      </ion-label>
+      <ion-text slot="end" [color]="item?.amount > 0 ? 'success' : 'danger'">₹{{item?.amount}}</ion-text>
+    </ion-item>
+  </ion-list> -->
+
+</ion-content>
